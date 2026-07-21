@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://or6f0qgobbo4"
-path="res://.godot/imported/VSVee.png-0a88ecb44f47bad6db1339a1c0ba1665.ctex"
+uid="uid://ck7e08ud7in4l"
+path="res://.godot/imported/VSArt-Valk.png-44a22a8db2372df000ef55c96cc3c7f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_BunBunBlack/VSVee.png"
-dest_files=["res://.godot/imported/VSVee.png-0a88ecb44f47bad6db1339a1c0ba1665.ctex"]
+source_file="res://Balls/Fighters/BC_Valkyrie/VSArt-Valk.png"
+dest_files=["res://.godot/imported/VSArt-Valk.png-44a22a8db2372df000ef55c96cc3c7f2.ctex"]
 
 [params]
 

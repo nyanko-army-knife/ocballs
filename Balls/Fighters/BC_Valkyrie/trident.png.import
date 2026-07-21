@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tdav1nwclvb3"
-path="res://.godot/imported/veegrapple.png-5c3e13c68116adc416566921e88118f6.ctex"
+uid="uid://c2c0kuv7hof24"
+path="res://.godot/imported/trident.png-407325c1ae55c6bc7a7c85c6e7dc7167.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_BunBunBlack/veegrapple.png"
-dest_files=["res://.godot/imported/veegrapple.png-5c3e13c68116adc416566921e88118f6.ctex"]
+source_file="res://Balls/Fighters/BC_Valkyrie/trident.png"
+dest_files=["res://.godot/imported/trident.png-407325c1ae55c6bc7a7c85c6e7dc7167.ctex"]
 
 [params]
 

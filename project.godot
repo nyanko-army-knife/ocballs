@@ -44,6 +44,10 @@ window/size/window_width_override=800
 window/size/window_height_override=800
 window/stretch/mode="viewport"
 
+[editor]
+
+movie_writer/movie_file="/home/yashk/Videos/captures/ocball.avi"
+
 [layer_names]
 
 2d_render/layer_1="Players"

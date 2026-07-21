@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db2kj6oqyd44c"
-path="res://.godot/imported/summerveeHurt.png-d505399cadb5886ade95de4adcbac8a8.ctex"
+uid="uid://b2pjy48nbr5vm"
+path="res://.godot/imported/bbb_arm.png-9456117e833331ebf0aa3f13b09c0eaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_BunBunBlack/summerveeHurt.png"
-dest_files=["res://.godot/imported/summerveeHurt.png-d505399cadb5886ade95de4adcbac8a8.ctex"]
+source_file="res://Balls/Fighters/BC_BunBunBlack/bbb_arm.png"
+dest_files=["res://.godot/imported/bbb_arm.png-9456117e833331ebf0aa3f13b09c0eaa.ctex"]
 
 [params]
 

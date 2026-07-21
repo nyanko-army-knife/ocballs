@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crc6pj87ehabe"
-path="res://.godot/imported/veescrumble2.png-6f48dbc711272976b163e4ecb9d190a7.ctex"
+uid="uid://or6f0qgobbo4"
+path="res://.godot/imported/VSBBB.png-0e0809637309642f49573b377ed1d7bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_BunBunBlack/veescrumble2.png"
-dest_files=["res://.godot/imported/veescrumble2.png-6f48dbc711272976b163e4ecb9d190a7.ctex"]
+source_file="res://Balls/Fighters/BC_BunBunBlack/VSBBB.png"
+dest_files=["res://.godot/imported/VSBBB.png-0e0809637309642f49573b377ed1d7bc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ipa7nssgv3t2"
-path="res://.godot/imported/veescrumble1.png-ad2105ab90d1b923933e404d182f61b7.ctex"
+uid="uid://be5tqgjqume6r"
+path="res://.godot/imported/valkyrie.png-af394571f021d91daf1bc12000909e36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_BunBunBlack/veescrumble1.png"
-dest_files=["res://.godot/imported/veescrumble1.png-ad2105ab90d1b923933e404d182f61b7.ctex"]
+source_file="res://Balls/Fighters/BC_Valkyrie/valkyrie.png"
+dest_files=["res://.godot/imported/valkyrie.png-af394571f021d91daf1bc12000909e36.ctex"]
 
 [params]
 

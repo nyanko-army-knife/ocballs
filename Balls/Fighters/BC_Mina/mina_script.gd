@@ -3,7 +3,7 @@
 
 extends BehaviourScript
 ## Set up bullet resource
-var bullet_res = preload("res://Balls/Fighters/BC_Mina/ShootyBullet.tscn")
+var bullet_res = preload("res://Balls/Fighters/BC_Mina/MinaBullet.tscn")
 
 ## Set references to nodes
 @onready var rotater: Rotater = $"../Rotater"

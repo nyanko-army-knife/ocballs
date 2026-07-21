@@ -1,20 +1,18 @@
 [gd_scene format=3 uid="uid://c2aigm7yl0p1b"]
 
 [ext_resource type="Script" uid="uid://ckpfcnw0bipfi" path="res://Balls/Fighters/Ball.gd" id="1_xstjt"]
-[ext_resource type="Script" uid="uid://dtk7ior7of6ma" path="res://Balls/Fighters/BC_BunBunBlack/vee_script.gd" id="2_hvg51"]
+[ext_resource type="Script" uid="uid://dtk7ior7of6ma" path="res://Balls/Fighters/BC_BunBunBlack/bbb.gd" id="2_hvg51"]
 [ext_resource type="Script" uid="uid://fo53apxu04vr" path="res://Balls/Components/looper.gd" id="3_r2kdg"]
 [ext_resource type="Script" uid="uid://bmjp1eltss0as" path="res://Balls/Components/after_imager.gd" id="4_5ehy8"]
 [ext_resource type="Script" uid="uid://dtuxvqxjontcy" path="res://Balls/Components/contact_damager.gd" id="5_boxxb"]
 [ext_resource type="Script" uid="uid://cpml5x1thhodd" path="res://Balls/Fighters/hit_processor.gd" id="6_gam3r"]
-[ext_resource type="Texture2D" uid="uid://b2pjy48nbr5vm" path="res://Balls/Fighters/BC_BunBunBlack/scrumveearm.png" id="7_r8fft"]
+[ext_resource type="Texture2D" uid="uid://b2pjy48nbr5vm" path="res://Balls/Fighters/BC_BunBunBlack/bbb_arm.png" id="7_r8fft"]
 [ext_resource type="Texture2D" uid="uid://dwdmgvgd74a2q" path="res://Assets/dotted-circle.png" id="8_lco7t"]
 [ext_resource type="PackedScene" uid="uid://gfer2umhn1ir" path="res://Balls/Fighters/visuals.tscn" id="9_0hlq8"]
 [ext_resource type="Texture2D" uid="uid://dvxyjf8fwtsjb" path="res://Balls/Fighters/BC_BunBunBlack/bun_bun_black.png" id="10_fhnay"]
 [ext_resource type="Script" uid="uid://bpiss2q1461pk" path="res://GameStuff/visuals_skin_swapper.gd" id="11_1f3qb"]
-[ext_resource type="Texture2D" uid="uid://b1pbogmfof4jh" path="res://Balls/Fighters/BC_BunBunBlack/scrumveecounter.png" id="12_ewl62"]
-[ext_resource type="Texture2D" uid="uid://docostc5tkarm" path="res://Balls/Fighters/BC_BunBunBlack/summerveeGrappleCharge.png" id="13_ojpmd"]
+[ext_resource type="Texture2D" uid="uid://cfxxs67p8yvy8" path="res://Balls/Fighters/BC_BunBunBlack/bun_bun_black_aggro.png" id="12_qo5dl"]
 [ext_resource type="Texture2D" uid="uid://dibbaascqkm6a" path="res://Balls/Fighters/BC_BunBunBlack/bun_bun_black_hurt.png" id="14_f74uu"]
-[ext_resource type="Texture2D" uid="uid://db2kj6oqyd44c" path="res://Balls/Fighters/BC_BunBunBlack/summerveeHurt.png" id="15_qwqmh"]
 [ext_resource type="Script" uid="uid://bu31ttkgcaxsv" path="res://Balls/Components/rotater.gd" id="16_03bob"]
 [ext_resource type="Texture2D" uid="uid://ce6lc6wccl42h" path="res://Balls/Fighters/BC_BunBunBlack/grabhand.png" id="17_yhs25"]
 [ext_resource type="PackedScene" uid="uid://slgqs2t3kpxh" path="res://Balls/Components/weapon_hitbox.tscn" id="18_f4os6"]
@@ -22,10 +20,8 @@
 [ext_resource type="Script" uid="uid://cyoea1so1sgna" path="res://Balls/health_manager.gd" id="20_b2cm1"]
 [ext_resource type="Script" uid="uid://ccgs4h8pbyba6" path="res://Balls/meter_manager.gd" id="21_ybx3e"]
 [ext_resource type="PackedScene" uid="uid://cy2eniqmvljtd" path="res://Balls/ball_stat_display.tscn" id="22_hf3if"]
-[ext_resource type="Texture2D" uid="uid://ipa7nssgv3t2" path="res://Balls/Fighters/BC_BunBunBlack/veescrumble1.png" id="23_nt75k"]
-[ext_resource type="AudioStream" uid="uid://dkvbsu470m4s3" path="res://Balls/Fighters/BC_BunBunBlack/name_vee.wav" id="24_vjgo3"]
-[ext_resource type="Texture2D" uid="uid://or6f0qgobbo4" path="res://Balls/Fighters/BC_BunBunBlack/VSVee.png" id="25_6wyu4"]
-[ext_resource type="Texture2D" uid="uid://kbmu5f8gp00y" path="res://Balls/Fighters/BC_BunBunBlack/summerveeVs.png" id="26_8oxjw"]
+[ext_resource type="AudioStream" uid="uid://dkvbsu470m4s3" path="res://Balls/Fighters/BC_BunBunBlack/name_bbb.wav" id="24_vjgo3"]
+[ext_resource type="Texture2D" uid="uid://or6f0qgobbo4" path="res://Balls/Fighters/BC_BunBunBlack/VSBBB.png" id="25_6wyu4"]
 [ext_resource type="Script" uid="uid://bu8lf26jjbrdg" path="res://Balls/Moods/mood_aggressive.gd" id="27_xty74"]
 [ext_resource type="Texture2D" uid="uid://cl8j2x2ygvhqg" path="res://Assets/boom.png" id="28_3bbl4"]
 
@@ -103,7 +99,7 @@ _data = {
 &"RESET": SubResource("Animation_n7cwa")
 }
 
-[node name="VeeBall" type="RigidBody2D" unique_id=1403036725]
+[node name="BBBBall" type="RigidBody2D" unique_id=1403036725]
 collision_layer = 112
 collision_mask = 17
 physics_material_override = SubResource("PhysicsMaterial_ig7tw")
@@ -116,18 +112,20 @@ max_contacts_reported = 1
 linear_damp_mode = 1
 angular_damp_mode = 1
 script = ExtResource("1_xstjt")
-bounce_speed_boost = 360.0
+ball_scale = 1.1
+velocity = 400.0
+bounce_speed_boost = 300.0
 skin = "Summer"
 
-[node name="VeeScript" type="Node" parent="." unique_id=815719418]
+[node name="BBBScript" type="Node" parent="." unique_id=815719418]
 script = ExtResource("2_hvg51")
 
-[node name="CounterLooper" type="Node" parent="VeeScript" unique_id=701216414]
+[node name="CounterLooper" type="Node" parent="BBBScript" unique_id=701216414]
 script = ExtResource("3_r2kdg")
 delay_time = 4.0
 added_rand_time = 4.0
 
-[node name="Afterimager" type="Node" parent="VeeScript" unique_id=1305688005 node_paths=PackedStringArray("ball", "visual")]
+[node name="Afterimager" type="Node" parent="BBBScript" unique_id=1305688005 node_paths=PackedStringArray("ball", "visual")]
 script = ExtResource("4_5ehy8")
 active = false
 ball = NodePath("../..")
@@ -176,7 +174,7 @@ texture = ExtResource("10_fhnay")
 visible = false
 position = Vector2(1.2154694, 1)
 scale = Vector2(0.55, 0.55)
-texture = ExtResource("10_fhnay")
+texture = ExtResource("12_qo5dl")
 script = ExtResource("11_1f3qb")
 locked_visual = true
 
@@ -184,18 +182,12 @@ locked_visual = true
 visible = false
 position = Vector2(1.2154694, 1)
 scale = Vector2(0.55, 0.55)
-texture = ExtResource("12_ewl62")
+texture = ExtResource("12_qo5dl")
 script = ExtResource("11_1f3qb")
 locked_visual = true
-dict_skin = Dictionary[String, Texture]({
-"Summer": ExtResource("13_ojpmd")
-})
 
 [node name="Hurt" parent="Visuals/Hurt" parent_id_path=PackedInt32Array(487229136, 81481545) index="0" unique_id=1323781346]
 texture = ExtResource("14_f74uu")
-dict_skin = Dictionary[String, Texture]({
-"Summer": ExtResource("15_qwqmh")
-})
 
 [node name="HealthLabel" parent="Visuals" index="4" unique_id=1931190732 node_paths=PackedStringArray("health_component")]
 health_component = NodePath("../../HealthManager")
@@ -245,6 +237,7 @@ shape = SubResource("CircleShape2D_0xm2m")
 [node name="HealthManager" type="Node2D" parent="." unique_id=991021552 node_paths=PackedStringArray("hitprocessor")]
 script = ExtResource("20_b2cm1")
 hitprocessor = NodePath("../HitProcessor")
+max_health = 120.0
 
 [node name="MeterManager" type="Node" parent="." unique_id=2056518451]
 script = ExtResource("21_ybx3e")
@@ -257,26 +250,22 @@ offset_top = 126.0
 offset_right = -83.0
 offset_bottom = 166.0
 
-[node name="Name" parent="StatsUI/BallStatDisplay/DescriptionBox" parent_id_path=PackedInt32Array(2045748137, 624450934) index="1" unique_id=1921250255]
-text = "VEE THE GRAPPLER"
+[node name="Name" parent="StatsUI/BallStatDisplay/Box/DescriptionBox" parent_id_path=PackedInt32Array(2045748137, 624450934) index="1" unique_id=1921250255]
+text = "BUN BUN BLACK"
 
-[node name="Description" parent="StatsUI/BallStatDisplay/DescriptionBox" parent_id_path=PackedInt32Array(2045748137, 624450934) index="3" unique_id=794553254]
+[node name="Description" parent="StatsUI/BallStatDisplay/Box/DescriptionBox" parent_id_path=PackedInt32Array(2045748137, 624450934) index="3" unique_id=794553254]
 offset_bottom = 362.0
-text = "Counter-grapples enemies with her flame-arm.
-Taking damage makes her next grapple stronger."
+text = "Grapples opponents periodically. Damage, Size, and grapple range increase as it loses health."
 
-[node name="Credit" parent="StatsUI/BallStatDisplay/DescriptionBox/Description" index="0" unique_id=522021847]
-text = "Ari"
+[node name="Credit" parent="StatsUI/BallStatDisplay/Box/DescriptionBox/Description" index="0" unique_id=522021847]
+text = ""
 
-[node name="Icon" parent="StatsUI/BallStatDisplay/BattleBar" parent_id_path=PackedInt32Array(2045748137, 846234039) index="3" unique_id=1728433949]
-texture = ExtResource("23_nt75k")
-dict_skin = Dictionary[String, Texture]({
-"Summer": ExtResource("13_ojpmd")
-})
+[node name="Icon" parent="StatsUI/BallStatDisplay/Box/BattleBar" parent_id_path=PackedInt32Array(2045748137, 846234039) index="3" unique_id=1728433949]
+texture = ExtResource("10_fhnay")
 
 [node name="SPLASHART" parent="StatsUI/BallStatDisplay/VsSplash" parent_id_path=PackedInt32Array(2045748137, 2023632038) index="0" unique_id=2081690940 node_paths=PackedStringArray("splasharts")]
 name_sound = ExtResource("24_vjgo3")
-name_text = "Vee"
+name_text = "Bun Bun Black"
 splasharts = {
 "Default": NodePath("TextureRect"),
 "Summer": NodePath("SummerRect")
@@ -297,24 +286,24 @@ offset_left = -482.0
 offset_top = -433.0
 offset_right = 518.0
 offset_bottom = 1278.0
-texture = ExtResource("26_8oxjw")
 expand_mode = 4
 stretch_mode = 4
 
 [node name="Chart" parent="StatsUI/BallStatDisplay/VsSplash/SPLASHART/AlignmentChart" parent_id_path=PackedInt32Array(2045748137, 1935891313) index="0" unique_id=858608945]
-modulate = Color(0.5287291, 0.18184532, 0.48399243, 1)
-grid_value = Vector2(0.3448276, 0.3586207)
+modulate = Color(0.89748853, 0.5207043, 0.061239444, 1)
+grid_value = Vector2(0.4275862, -0.86206895)
 
 [node name="StarPoint" parent="StatsUI/BallStatDisplay/VsSplash/SPLASHART/AlignmentChart" parent_id_path=PackedInt32Array(2045748137, 1935891313) index="5" unique_id=2127130666]
-offset_left = 50.0
-offset_top = 52.0
-offset_right = 90.0
-offset_bottom = 92.0
-grid_value = Vector2(0.3448276, 0.3586207)
+offset_left = 62.0
+offset_top = -125.0
+offset_right = 102.0
+offset_bottom = -85.0
+grid_value = Vector2(0.4275862, -0.86206895)
 
 [node name="Description" parent="StatsUI/BallStatDisplay/WinSpeech/WinBubble" parent_id_path=PackedInt32Array(2045748137, 347726285) index="1" unique_id=316822069]
 modulate = Color(0.67238164, 0.40557417, 0.6060395, 1)
-text = "\"Ughh... I need a drink.\""
+text = "\"Sorry for bringing 
+two guns to a knife fight\""
 
 [node name="Aggressive" type="Node2D" parent="." unique_id=288242969 node_paths=PackedStringArray("ball")]
 script = ExtResource("27_xty74")

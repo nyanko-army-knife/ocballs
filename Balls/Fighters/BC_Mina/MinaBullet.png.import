@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://docostc5tkarm"
-path="res://.godot/imported/summerveeGrappleCharge.png-06a796c2918fd6449fb87cc0eac2d9c6.ctex"
+uid="uid://0aebc6rkt2ok"
+path="res://.godot/imported/MinaBullet.png-76508954a3e57ca730826ab8d39b79f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_BunBunBlack/summerveeGrappleCharge.png"
-dest_files=["res://.godot/imported/summerveeGrappleCharge.png-06a796c2918fd6449fb87cc0eac2d9c6.ctex"]
+source_file="res://Balls/Fighters/BC_Mina/MinaBullet.png"
+dest_files=["res://.godot/imported/MinaBullet.png-76508954a3e57ca730826ab8d39b79f1.ctex"]
 
 [params]
 

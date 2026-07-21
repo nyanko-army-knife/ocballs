@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dkvbsu470m4s3"
-path="res://.godot/imported/name_vee.wav-72385a15428ca42796396401dcd66783.sample"
+path="res://.godot/imported/name_bbb.wav-6baba09e6f68c02cbd9421c6e6b3ca5c.sample"
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_BunBunBlack/name_vee.wav"
-dest_files=["res://.godot/imported/name_vee.wav-72385a15428ca42796396401dcd66783.sample"]
+source_file="res://Balls/Fighters/BC_BunBunBlack/name_bbb.wav"
+dest_files=["res://.godot/imported/name_bbb.wav-6baba09e6f68c02cbd9421c6e6b3ca5c.sample"]
 
 [params]
 

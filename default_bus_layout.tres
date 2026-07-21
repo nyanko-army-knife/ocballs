@@ -21,7 +21,6 @@ band_db/1000_hz = -13.3
 band_db/3200_hz = -5.3
 
 [resource]
-bus/0/mute = true
 bus/0/volume_db = -1.519247
 bus/0/effect/0/effect = SubResource("AudioEffectReverb_j3pel")
 bus/0/effect/0/enabled = true

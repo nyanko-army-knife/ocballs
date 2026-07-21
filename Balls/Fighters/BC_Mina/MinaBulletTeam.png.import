@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1frovuqg6s0o"
-path="res://.godot/imported/vee2v2.png-556659b8c84ea8e9f824ca5d84102fd6.ctex"
+uid="uid://04lhxspomi6h"
+path="res://.godot/imported/MinaBulletTeam.png-57e44498d8356dcc2994134f2b695b41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_BunBunBlack/vee2v2.png"
-dest_files=["res://.godot/imported/vee2v2.png-556659b8c84ea8e9f824ca5d84102fd6.ctex"]
+source_file="res://Balls/Fighters/BC_Mina/MinaBulletTeam.png"
+dest_files=["res://.godot/imported/MinaBulletTeam.png-57e44498d8356dcc2994134f2b695b41.ctex"]
 
 [params]
 

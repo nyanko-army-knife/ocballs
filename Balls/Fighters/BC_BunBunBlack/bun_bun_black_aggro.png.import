@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0aebc6rkt2ok"
-path="res://.godot/imported/ShootyBullet.png-caa1f849a113dc7567e4ac2e8ceedf8a.ctex"
+uid="uid://cfxxs67p8yvy8"
+path="res://.godot/imported/bun_bun_black_aggro.png-04c7bf308167ff765cf39749e933f5ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_Mina/ShootyBullet.png"
-dest_files=["res://.godot/imported/ShootyBullet.png-caa1f849a113dc7567e4ac2e8ceedf8a.ctex"]
+source_file="res://Balls/Fighters/BC_BunBunBlack/bun_bun_black_aggro.png"
+dest_files=["res://.godot/imported/bun_bun_black_aggro.png-04c7bf308167ff765cf39749e933f5ad.ctex"]
 
 [params]
 

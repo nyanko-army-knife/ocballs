@@ -35,21 +35,21 @@ func counter():
 		return
 	ball.set_velocity(dir*(ball.get_velocity().length()))
 
-	sc.add_modifier("HitProcessor.crit_immune",2,true,"VeeCounter")
-	sc.add_modifier("Ball.velocity",1,0.65,"VeeCounter")
+	sc.add_modifier("HitProcessor.crit_immune",2,true,"BBBCounter")
+	sc.add_modifier("Ball.velocity",1,0.65,"BBBCounter")
 	#meter_manager.gain_meter(5)
 	countering=true
 	#sc.add_modifier("Ball.linear_velocity",1,0.35,"VeeCountering")
 	counter_arms.visible=true
 	default.set_visual("Counter")
 	sc.set_base_stat("HitProcessor.damage_scale",0.01)
-	await delay(0.6)
+	await delay(0.6 + 0.4*scaler())
 	uncounter()
 
 
 func uncounter():
 	if countering==true:
-		sc.remove_modifier("VeeCounter")
+		sc.remove_modifier("BBBCounter")
 		sc.set_base_stat("HitProcessor.damage_scale",1)
 		counter_arms.visible=false
 		default.set_visual("Default")
@@ -61,32 +61,35 @@ func hit_process(data):
 	var victim = data["VICTIM"]
 	var dmg = data["DAMAGE"]
 	var id = data["ID"]
+	var type = data["TYPE"]
 
 	if health_manager.health>0:
-		## If we hit someone, apply burning status
-		if attacker==ball:
-			## If id of damage is VEEGRAPPLE, do more burn damage
-			if id == "VEEGRAPPLE":
-				var dmg_bonus = data.get("MISC").get("BURN")
-				await get_tree().process_frame
-				if !is_instance_valid(victim):
+		if countering and !type.has("STATUS_EFFECT"):
+			for thing in danger_zone.get_overlapping_bodies():
+				if !thing is BallBodyBase:
+					continue
+				if thing.team==ball.team:
+					continue
+				if !thing.is_in_group("AntiGrapple") and !thing.is_in_group("AntiInteract"):
+					grapple(thing)
 					return
-				StatusEffectManager.set_effect(ball,victim,"BURNING",dmg_bonus,{"SOURCE":ball})
-			else:
-				StatusEffectManager.set_effect(ball,victim,"BURNING",1,{"SOURCE":ball})
 
 		## If we are hit and countering, grapple them
 		if victim==ball:
 			if behaviour_active==false:
 				return
-			if countering:
-				if attacker is BallBodyBase:
-					for thing in danger_zone.get_overlapping_bodies():
-						if thing.team==attacker.team and !thing.is_in_group("AntiGrapple") and !thing.is_in_group("AntiInteract"):
-							grapple(thing)
-							return
-			meter_manager.gain_meter(dmg*1.2)
+			meter_manager.gain_meter(dmg*1.1)
+			update_scale()
 
+
+func update_scale():
+	sc.set_base_stat("HitProcessor.damage_scale", 1.0-0.5*scaler())
+	sc.set_base_stat("Ball.ball_scale",1.1+0.5*scaler())
+	sc.set_base_stat("HitboxDamager.damage", 1.0+1.2*scaler())
+	danger_zone.scale=Vector2(1.1+0.5*scaler(), 1.1+0.5*scaler())
+
+func scaler():
+	return (meter_manager.meter/100.0)
 
 
 
@@ -180,8 +183,7 @@ func grab_died():
 ## Function to deal grapple damage to enemy and nearby enemies
 func grapple_damage(victim):
 	var dir = ball.global_position.direction_to(victim.global_position)
-	var dmg_bonus = int(22*meter_manager.scale_value())
-	var data_dict={"DAMAGE":8+dmg_bonus,
+	var data_dict={"DAMAGE":7.0+8.0*scaler(),
 				"ATTACKER":ball,
 				"VICTIM":victim,
 				"KNOCKBACK":380,
@@ -191,8 +193,8 @@ func grapple_damage(victim):
 				"CRIT_MULTIPLIER":1,
 				"TYPE":["EXPLOSION"],
 				"SFX":"",
-				"ID":"VEEGRAPPLE",
-				"MISC":{"BURN":1+4*meter_manager.scale_value()}}
+				"ID":"BBBGrapple",
+				"MISC":{"BURN":1}}
 	EventManager.hit.emit(data_dict)
 
 ## Release what we were grappling if it died
@@ -204,15 +206,9 @@ func clear_grapple():
 	countering=false
 	sc.set_base_stat("Mood.disabled",false)
 	await get_tree().physics_frame
-	meter_manager.clear_meter()
 	$"../Rotater/GrappleTransform/GrabHand".visible=false
 
 	await delay(0.12)
 	sc.set_base_stat("HitProcessor.immune",false)
 	sc.set_base_stat("ContactDamager.enabled",true)
 	sc.set_base_stat("Hitbox.collision_disabled",true)
-
-
-
-func health_scale():
-	return 1.0-(health_manager.health/100.0)

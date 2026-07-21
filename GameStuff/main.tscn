@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dk578adhassu0" path="res://Assets/Grid.png" id="1_4c57u"]
 [ext_resource type="Script" uid="uid://dykgun60u01lc" path="res://GameStuff/main.gd" id="1_efxa6"]
 [ext_resource type="Script" uid="uid://5btu2l4gh0i4" path="res://GameStuff/deleter.gd" id="1_kek77"]
-[ext_resource type="PackedScene" uid="uid://7u2bgsyl5c52" path="res://Balls/Fighters/Vee/ball_vee.tscn" id="2_0xn6e"]
-[ext_resource type="PackedScene" uid="uid://cu4laqyyr3nqr" path="res://Balls/Fighters/Hiro/ball_hiro.tscn" id="3_dnuga"]
+[ext_resource type="PackedScene" uid="uid://c2aigm7yl0p1b" path="res://Balls/Fighters/BC_BunBunBlack/ball_bbb.tscn" id="3_dnuga"]
+[ext_resource type="PackedScene" uid="uid://da4hy54r5yye8" path="res://Balls/Fighters/BC_MetalDoge/metal_doge.tscn" id="3_ejy2k"]
 [ext_resource type="Script" uid="uid://cyrgalcbxrwvg" path="res://GameStuff/game_TIMER.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://ff260b1xf73s" path="res://GameStuff/damage_recorder.gd" id="4_0xn6e"]
 [ext_resource type="Script" uid="uid://b4yamxnewh71l" path="res://GameStuff/confetti_cannon.gd" id="4_074og"]
@@ -101,8 +101,8 @@ _data = {
 
 [node name="Main1v1" type="Node2D" unique_id=2110299460 groups=["Arena"]]
 script = ExtResource("1_efxa6")
-ball1_res = ExtResource("2_0xn6e")
-ball2_res = ExtResource("3_dnuga")
+ball1_res = ExtResource("3_dnuga")
+ball2_res = ExtResource("3_ejy2k")
 
 [node name="DamageRecorder" type="Node" parent="." unique_id=174541411]
 script = ExtResource("4_0xn6e")

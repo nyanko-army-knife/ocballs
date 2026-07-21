@@ -54,7 +54,7 @@ func _expire():
 
 func update_slow():
 	baller.stat_controller.remove_modifier("CHILL_SLOW")
-	baller.stat_controller.add_modifier("Ball.velocity", 1, 1.0 - (0.6 * scaler()), "CHILL_SLOW")
+	baller.stat_controller.add_modifier("Ball.velocity", 1, 1.0 - (1.0 * scaler()), "CHILL_SLOW")
 
 func on_leave():
 	super()

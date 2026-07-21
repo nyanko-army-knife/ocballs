@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://04lhxspomi6h"
-path="res://.godot/imported/ShootyBulletTeam.png-e1f4206db7757bc0ba2f7dd18597e9e1.ctex"
+uid="uid://b4jgcqabd8i7x"
+path="res://.godot/imported/valkyrie_hurt.png-a3191e6923cac67fd66be312562a25ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Balls/Fighters/BC_Mina/ShootyBulletTeam.png"
-dest_files=["res://.godot/imported/ShootyBulletTeam.png-e1f4206db7757bc0ba2f7dd18597e9e1.ctex"]
+source_file="res://Balls/Fighters/BC_Valkyrie/valkyrie_hurt.png"
+dest_files=["res://.godot/imported/valkyrie_hurt.png-a3191e6923cac67fd66be312562a25ed.ctex"]
 
 [params]
 

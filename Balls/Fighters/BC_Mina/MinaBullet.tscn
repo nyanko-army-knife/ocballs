@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ckpfcnw0bipfi" path="res://Balls/Fighters/Ball.gd" id="1_wacxy"]
 [ext_resource type="PackedScene" uid="uid://gfer2umhn1ir" path="res://Balls/Fighters/visuals.tscn" id="2_go6f3"]
-[ext_resource type="Texture2D" uid="uid://04lhxspomi6h" path="res://Balls/Fighters/BC_Mina/ShootyBulletTeam.png" id="3_glqxk"]
-[ext_resource type="Texture2D" uid="uid://0aebc6rkt2ok" path="res://Balls/Fighters/BC_Mina/ShootyBullet.png" id="4_w4bds"]
+[ext_resource type="Texture2D" uid="uid://04lhxspomi6h" path="res://Balls/Fighters/BC_Mina/MinaBulletTeam.png" id="3_glqxk"]
+[ext_resource type="Texture2D" uid="uid://0aebc6rkt2ok" path="res://Balls/Fighters/BC_Mina/MinaBullet.png" id="4_w4bds"]
 [ext_resource type="Script" uid="uid://chi760q0gtbp7" path="res://Balls/Components/ball_movement_sync.gd" id="5_h6405"]
 [ext_resource type="Script" uid="uid://8txv3aggik85" path="res://Balls/Fighters/BC_Mina/bullet_script.gd" id="6_t7wu4"]
 [ext_resource type="Script" uid="uid://cpml5x1thhodd" path="res://Balls/Fighters/hit_processor.gd" id="7_bql10"]

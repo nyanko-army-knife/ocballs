@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bf1uvsayniq03"]
 
 [ext_resource type="Script" uid="uid://ckpfcnw0bipfi" path="res://Balls/Fighters/Ball.gd" id="1_jir3k"]
-[ext_resource type="Script" uid="uid://b2ej4ij27l5k0" path="res://Balls/Fighters/BC_Mina/shooty_script.gd" id="2_72k12"]
+[ext_resource type="Script" uid="uid://b2ej4ij27l5k0" path="res://Balls/Fighters/BC_Mina/mina_script.gd" id="2_72k12"]
 [ext_resource type="Script" uid="uid://1ipvihctelcs" path="res://Balls/Components/meter_autogain.gd" id="3_c41nr"]
 [ext_resource type="Script" uid="uid://fo53apxu04vr" path="res://Balls/Components/looper.gd" id="4_irqyn"]
 [ext_resource type="Script" uid="uid://cpml5x1thhodd" path="res://Balls/Fighters/hit_processor.gd" id="5_xk4rw"]
@@ -162,16 +162,13 @@ offset_top = 143.0
 offset_right = 84.0
 offset_bottom = 183.0
 
-[node name="Name" parent="StatsUI/BallStatDisplay/DescriptionBox" parent_id_path=PackedInt32Array(750446237, 624450934) index="1" unique_id=1921250255]
+[node name="Name" parent="StatsUI/BallStatDisplay/Box/DescriptionBox" parent_id_path=PackedInt32Array(750446237, 624450934) index="1" unique_id=1921250255]
 text = "MINA"
 
-[node name="Description" parent="StatsUI/BallStatDisplay/DescriptionBox" parent_id_path=PackedInt32Array(750446237, 624450934) index="3" unique_id=794553254]
+[node name="Description" parent="StatsUI/BallStatDisplay/Box/DescriptionBox" parent_id_path=PackedInt32Array(750446237, 624450934) index="3" unique_id=794553254]
 text = "Shoots a Killer Cat from her bazooka. On full meter, shoots a True Killer Cat with a huge explosion."
 
-[node name="Credit" parent="StatsUI/BallStatDisplay/DescriptionBox/Description" index="0" unique_id=522021847]
-text = ""
-
-[node name="Icon" parent="StatsUI/BallStatDisplay/BattleBar" parent_id_path=PackedInt32Array(750446237, 846234039) index="3" unique_id=1728433949]
+[node name="Icon" parent="StatsUI/BallStatDisplay/Box/BattleBar" parent_id_path=PackedInt32Array(750446237, 846234039) index="3" unique_id=1728433949]
 texture = ExtResource("7_t5lyl")
 
 [node name="SPLASHART" parent="StatsUI/BallStatDisplay/VsSplash" parent_id_path=PackedInt32Array(750446237, 2023632038) index="0" unique_id=2081690940 node_paths=PackedStringArray("splasharts")]
